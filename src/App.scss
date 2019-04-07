@@ -1,0 +1,92 @@
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+.next-step {
+  background: green;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: white;
+}
+
+.section-title {
+  font-size: 1.25em;
+  font-weight: 500;
+  padding: 5px;
+  text-transform: capitalize;
+}
+
+.new-orders {
+  width: 100%;
+  flex-basis: 200px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  background: #efefef;
+}
+
+.machines {
+  display: flex;
+  flex-grow: 1;
+  .machine {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    &:nth-child(odd) {
+      //background: #f3f3f3;
+    }
+  }
+}
+
+.completed-orders {
+  flex-basis: 200px;
+  background: #efefef;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+}
+
+.part {
+  background: #fafafa;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  margin: 10px;
+  flex-basis: 150px;
+  border: 1px solid #ddd;
+  .part-name {
+    background: #007bff;
+    padding: 5px;
+    color: white;
+    border-radius: 4px 4px 0 0;
+  }
+  .part-test {
+    display: flex;
+    margin: 5px 15px 0 15px;
+    .part-test-name { text-transform: capitalize; }
+  }
+
+  .part-test-state {
+    border-radius: 100%;
+    height: 10px;
+    width: 10px;
+    margin-top: 4px;
+    margin-right: 10px;
+    &.complete { background: green; }
+    &.incomplete { background: red; }
+  }
+}
